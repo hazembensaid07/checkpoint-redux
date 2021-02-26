@@ -46,9 +46,12 @@ const Edit = (props) => {
           <Button
             variant="primary"
             onClick={() => {
-              dispatch(editTask({ name: name, id: props.task.id }));
-              setName("");
-              handleClose();
+              let a = name;
+              if (a !== "") {
+                dispatch(editTask({ name: name, id: props.task.id }));
+                setName("");
+                handleClose();
+              } else alert("you should enter the task name ");
             }}
           >
             Save Changes

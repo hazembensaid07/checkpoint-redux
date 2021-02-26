@@ -42,7 +42,7 @@ const AddTask = () => {
                     );
                     setName("");
                   } else {
-                    alert("no");
+                    alert("you should enter the task name ");
                   }
                 }}
               >
