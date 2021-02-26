@@ -1,18 +1,13 @@
-import { React, useState } from "react";
+import { React } from "react";
 import { useDispatch } from "react-redux";
-import { deleteTask, doneTask, editTask } from "../../Redux/Action/Action";
-import { Modal, Button } from "react-bootstrap";
+import { deleteTask, doneTask } from "../../Redux/Action/Action";
+
 import "./Task.css";
 import "bootstrap/dist/css/bootstrap.css";
 import Edit from "../Edit";
 const Task = (props) => {
-  // const [name, setName] = useState("");
-
   const dispatch = useDispatch();
 
-  // function handleChangeName(e) {
-  //   setName(e.target.value);
-  // }
   return (
     <div>
       <div className="container mt-5">
@@ -46,7 +41,11 @@ const Task = (props) => {
                         <div className="d-flex flex-row mt-1 text-black-50 date-time" />
                       </div>
                     </div>
-                    <Edit />
+                    <div className="d-flex flex-row align-items-center">
+                      <div className="d-flex flex-column mr-2">
+                        <Edit task={props.task} />
+                      </div>
+                    </div>
                     <div className="d-flex flex-row align-items-center">
                       <div className="d-flex flex-column mr-2">
                         <button

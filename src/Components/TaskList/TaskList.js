@@ -28,12 +28,12 @@ const TaskList = () => {
           {filter === 1
             ? taskList
                 .filter((el) => el.done === true)
-                .map((el) => <Task task={el} />)
+                .map((el) => <Task task={el} key={el.id} />)
             : filter === 2
             ? taskList
                 .filter((el) => el.done === false)
-                .map((el) => <Task task={el} />)
-            : taskList.map((el) => <Task task={el} />)}
+                .map((el) => <Task task={el} key={el.id} />)
+            : taskList.map((el) => <Task task={el} key={el.id} />)}
         </ol>
       </div>
     </div>

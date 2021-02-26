@@ -8,10 +8,9 @@ import store from "./Redux/Store/Store";
 import "bootstrap/dist/css/bootstrap.css";
 
 ReactDOM.render(
-  <React.StrictMode>
-    <Provider store={store}>
-      <App />
-    </Provider>
-  </React.StrictMode>,
+  <Provider store={store}>
+    <App />
+  </Provider>,
+
   document.getElementById("root")
 );
